@@ -84,27 +84,21 @@ public class FirstAssignmentProgramming {
             
             //POSSIBLE IMPROVEMENT 2-- Can you improve the decision below? If yes --> How?
         // Change the code to show your improvement, but make sure the functionality is EXACTLY THE SAME !
-            if ((userAge >= 50) && ( userAge <= 120 )){
-                
+            if ((userAge >= 50) && ( userAge < 120 )){
+                // Prints a message if the user is over over 50y and under 120y
                 System.out.println("You don't look that old");
-                
-            } else if ((userAge <50) && (userAge < 120)){
-                
+            } else if (userAge <50){ 
+                // Prints a message if the user is under 50y
                 System.out.println("Getting younger?");
-                
-            } else if (userAge >= 120){
-                
-                 System.out.println("That's a great age!");
             } else {
-                
-                System.out.println("That's a great age!");
-                
+                // Prints a message if the user is 120 years or more
+                System.out.println("That's a great age!");  
             }
             //End of Possible Improvement 2
             
-        }catch(Exception e){
-            
-            System.out.println("Output Message 5");
+        }catch(Exception e){ 
+            // Prints a message if the user type in non-numerical characteres as her/his age
+            System.out.println("Invalid entry, you must type in a number for your age");
         }
 
     }
