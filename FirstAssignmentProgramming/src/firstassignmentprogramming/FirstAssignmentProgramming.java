@@ -27,17 +27,17 @@ public class FirstAssignmentProgramming {
         
         System.out.println("Please enter the name of your favourite movie");
         
-        // Collects the movie name from the user
+        //Collects the movie name from the user
         movieName = myKB.nextLine();
         
         //Displays the number of characters of the film the user entered
         System.out.println("The number of characters of the name of your film is: " + movieName.length());
         
         if (!movieName.contains("Star")){
-            // Displays if the film starts with  the word "Star"
+            // Displays if the film doesn't have "Star" on its name
             System.out.println("Your film name doesn't have \"Star\" on its name" );
         } else {
-            // Displays if the film doesn't starts with  the word "Star"
+            // Displays if the film doesn't have the word "Star"
             System.out.println("Your film has \"Star\" on its name");
         }
     
@@ -58,8 +58,8 @@ public class FirstAssignmentProgramming {
                 System.out.println("I can't think of many movie's that start with a K");
                 break;
             default:
-                // Displays a message if the film name doesn't starts with "X", "Z" nor "K" 
-                System.out.println("Your film name doesn't starts with \"X\", \"Z\" nor \"K\"");
+                // Displays a message if the film name doesn't start with "X", "Z" or "K" 
+                System.out.println("Your film name doesn't starts with \"X\", \"Z\" or \"K\"");
                 break;
         } 
         
@@ -85,19 +85,19 @@ public class FirstAssignmentProgramming {
             //POSSIBLE IMPROVEMENT 2-- Can you improve the decision below? If yes --> How?
         // Change the code to show your improvement, but make sure the functionality is EXACTLY THE SAME !
             if ((userAge >= 50) && ( userAge < 120 )){
-                // Prints a message if the user is over over 50y and under 120y
+                // Prints a message if the user is over over 50 years old and under 120 years old
                 System.out.println("You don't look that old");
             } else if (userAge <50){ 
-                // Prints a message if the user is under 50y
+                // Prints a message if the user is under 50 years old
                 System.out.println("Getting younger?");
             } else {
-                // Prints a message if the user is 120 years or more
+                // Prints a message if the user is 120 years old or above
                 System.out.println("That's a great age!");  
             }
             //End of Possible Improvement 2
             
         }catch(Exception e){ 
-            // Prints a message if the user type in non-numerical characteres as her/his age
+            // Prints a message if the user type in non-numerical characteres as his/her age
             System.out.println("Invalid entry, you must type in a number for your age");
         }
 
