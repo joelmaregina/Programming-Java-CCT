@@ -31,14 +31,14 @@ public class FirstAssignmentProgramming {
         movieName = myKB.nextLine();
         
         //Displays the number of characters of the film the user entered
-        System.out.println("The number of characters of the name of your film is: " + movieName.length());
+        System.out.println("The number of characters of the name of your film (including spaces) is: " + movieName.length());
         
         if (!movieName.contains("Star")){
             // Displays if the film doesn't have "Star" on its name
-            System.out.println("Your film name doesn't have \"Star\" on its name" );
+            System.out.println("Your film name doesn't have \"Star\" on its name (including the capital \"S\") " );
         } else {
             // Displays if the film doesn't have the word "Star"
-            System.out.println("Your film has \"Star\" on its name");
+            System.out.println("Your film has \"Star\" on its  (including the capital \"S\") ");
         }
     
         //POSSIBLE IMPROVEMENT 1 -- Can you improve the decision below? If yes --> How?
@@ -63,18 +63,6 @@ public class FirstAssignmentProgramming {
                 break;
         } 
         
-        /*if (movieName.substring(0,1).equalsIgnoreCase("X")){
-
-        } else if (movieName.substring(0,1).equalsIgnoreCase("Z")){
-            // Displays a message if the film name starts with "Z"
-            System.out.println("Interesting...is that a Zombie movie? Or Zoolander?");
-        } else if (movieName.substring(0,1).equalsIgnoreCase("K")){
-            // Displays a message if the film name starts with "K"
-            System.out.println("I can't think of many movie's that start with a K");
-        } else {
-            // Displays a message if the film name doesn't starts with "X", "Z" nor "K" 
-            System.out.println("Your film doesnt film name doesn't starts with \"X\", \"Z\" nor \"K\"");
-        } */
         ///END OF POSSIBLE IMPROVEMENT 1
         
         try{
