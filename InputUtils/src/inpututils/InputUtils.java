@@ -10,78 +10,90 @@ import java.util.Scanner;
  *
  * @author joelm
  */
-public class InputUtils {
+    public class InputUtils {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+        /**
+         * Ask the user to enter text
+         * If nor text,repeat prompt
+        @param prompt the question to the user
+        @retun some valid text from the user as a String
+        * 
+        */
+    
+        public String askUserForText (String prompt) {
+        
         Scanner myInput = new Scanner(System.in);
         
         String userInput;
-        int maxValue = 20;
-        int number = 0;
         
-        /*
         do{
-            System.out.println("Enter some text: ");
+            System.out.println(prompt);
             System.out.println("You must enter text only!");
             
             userInput = myInput.nextLine();
+        }while (!userInput.matches("[a-zA-Z!?.!', ]+"));
             
-        } while(!userInput.matches("[a-zA-Z!?.!', ]+"));
-        */
+        return (userInput);
+        }
         
-        /*
+    /**
+     * Ask user for an integer with given maximum
+     * If not valid keep asking
+     * @param prompt The prompt or question for the user
+     * @return a valid int entered by he user
+     */
+
+    public int askUserForInt (String prompt){
+
+        Scanner myInput = new Scanner(System.in);
+
+        String userInput;
+        
         do{
-            System.out.println("Enter some number: ");
+            System.out.println(prompt);
             System.out.println("You must enter numbers only!");
             
             userInput = myInput.nextLine();
             
         } while(!userInput.matches("[0-9]+"));
         
-        number = Integer.parseInt(userInput);
-        
-        number *= 2;
-        
-        System.out.println("The double of your number = " + number);
-        */
-        
-        int myInputNum = maxValue + 1;
-                
-        /*
-        do{
-            System.out.println("Enter some number (Max value = 20): ");
-            System.out.println("You must enter numbers only (Max value = 20)!");
-            
-            userInput = myInput.nextLine();
-            
-            if (userInput.matches("[0-9]+")){
-                number = Integer.parseInt(userInput);
-            }
-            
-        } while(!userInput.matches("[0-9]+") || number > maxValue);
-        
-        System.out.println("The double of your number = " + (number*2));
-        */
-       
+        return (Integer.parseInt(userInput));
+ 
+    }
+
+    /**
+     * Ask user to enter integer value based on prompt
+     * if not an int then keep asking
+     * @param prompt The prompt / question for the user
+     * @return an inv value 
+     */
+    public int askUserForIntM (String prompt, int maxValue){
+        Scanner myInput = new Scanner(System.in);
+
+        int userInput = maxValue+1;
 
         do{
-            System.out.println("Enter some number (Max value = 20): ");
-            System.out.println("You must enter numbers only (Max value = 20)!");
+                System.out.println("Enter a number");
+                System.out.println("You must enter a number less than: " + maxValue);
+
+                try{
+                    userInput= myInput.nextInt();
+                } catch (Exception e){
+                    System.out.println("That was not a number!");
+                    myInput.nextLine();
+                } 
+
+            } while(userInput > maxValue);
             
-            try{
-                myInputNum = myInput.nextInt();
-            } catch (Exception e){
-                System.out.println("That was not a number!");
-                myInput.nextLine();
-            } 
-   
-        } while(myInputNum > maxValue);
-        
-        System.out.println("The double of your number = " + (myInputNum*2));
+            return (userInput);
+        }
+        /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+                
+       
     }
     
 }
