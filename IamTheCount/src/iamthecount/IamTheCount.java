@@ -5,6 +5,7 @@
  */
 package iamthecount;
 
+import inpututils.InputUtils;
 import java.util.Scanner;
 
 
@@ -28,21 +29,14 @@ public class IamTheCount {
         int maxStudents=0 ;
         
        
-         Scanner myKB = new Scanner(System.in);
+        InputUtils myInput = new InputUtils();
         
-        System.out.println("How many students are in class today?");
-            
-        maxStudents = myKB.nextInt();
-        // input must be a number
-        
-        System.out.println("I am the count...I love to count. Let's count students...");
+        maxStudents = myInput.askUserForInt("How many students in the class?");
+
         
         for(int i=1; i<=maxStudents; i++){
             //each time around loop - print out a message with the current counter value
             System.out.println( i + " student! Ah...ah..ah..ah!");
-            
-            myKB.nextLine();
-             
         }
     }
     
