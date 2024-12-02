@@ -38,7 +38,7 @@ import java.util.Scanner;
         }
         
         /**
-         * Ask user for an integer value based on a prompt
+         * Ask user for an integer value basef on a prompt
          * If not valid keep asking
          * @param prompt The prompt or question for the user
          * @return a valid int entered by he user
