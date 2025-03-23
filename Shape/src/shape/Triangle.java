@@ -22,13 +22,27 @@ public class Triangle {
         this.height = height;
     }
     
+    public Triangle (){
+        this.base = 2;
+        this.height = 3;
+    }
+    
+
     /**
      * Calculate the area of the rectangle
      * @return The area as an int
      */
     //METHODS
     
-    public int getArea(){
+    public int getBase(){
+        return base;
+    }
+    
+    public int getHeight() {
+        return height;
+    }
+
+    public int getArea() {
         return ( (this.base * this.height)/2 );
     }
     

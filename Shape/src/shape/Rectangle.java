@@ -20,14 +20,30 @@ public class Rectangle {
         this.height = height;
         this.width = width;
     }
-    
-    
+
+    //Default rectangle
+    public Rectangle() {
+        this.height = 2;
+        this.width = 1;
+    }
+ 
+
     /**
      * Calculate the area of the rectangle
      * @return The area as an int
-    */
+     */
     //METHODS
-    public int getArea(){
+    
+
+    public int getWidth() {
+        return width;
+    }
+    
+    public int getHeight(){
+        return height;
+    }
+
+    public int getArea() {
         return (this.height * this.width);
     }
 }
